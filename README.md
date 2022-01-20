@@ -17,3 +17,7 @@ Pdf share because local storage won’t share.
 - Another page showing staged tours (previous tours) (two to a row) 
 
 - Link to [wireframe](https://docs.google.com/presentation/d/1sa57tjAPviC49wgRLB6-E4JoyQ3QfeO553_733RTJrc/edit#slide=id.p)
+
+## User Story
+
+- As someone looking to visit a new city, I want to enter that city into the application and find a list of breweries along with their location so that I can develop a route to visit different breweries and bottleshops in that city, and find the best route between them, along with the weather for that day.
