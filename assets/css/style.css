@@ -44,7 +44,7 @@ h4 {
 
 /* home page bg - this is currently inline style css is not applying. */
 .home {
-    background-image:url('assets/images/beer.jpg');
+    background-image:url('../images/beer.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -78,7 +78,6 @@ h4 {
     background-color: rgba(232,229,218,0.9);
     border: var(--amber);
 }
-
 .start p {
     line-height: 1.6;
     margin-top: 12px;
