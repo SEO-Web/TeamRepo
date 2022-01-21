@@ -68,7 +68,6 @@ h4 {
 }
 .header h1 {
     color:var(--amber);
-    font-size: 180%;
 }
 .header p {
     color:var(--amber);
@@ -79,9 +78,7 @@ h4 {
     background-color: rgba(232,229,218,0.9);
     border: var(--amber);
 }
-.start h1 {
-    font-size: 180%;
-}
+
 .start p {
     line-height: 1.6;
     margin-top: 12px;
