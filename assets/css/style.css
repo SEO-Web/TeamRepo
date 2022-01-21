@@ -1,0 +1,142 @@
+/* Global Elements */
+:root {
+    --cream:#e8e5da;
+    --black:#222222;
+    --amber:#eb6534;
+    --orange:#ff5714;
+    --blue:#197bbd;
+}
+
+/* Elements */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: 16px;
+    line-height:1.4;
+    font-weight: 200;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size:180%;
+}
+h2 {font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 160%;
+}
+h3 {
+    font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 140%;
+}
+h4 {
+    font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 120%;
+}
+/* classes */
+
+/* home page bg - this is currently inline style css is not applying. */
+.home {
+    background-image:url('assets/images/beer.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+/* header section */
+.header {
+    background-color: rgba(34,34,34,0.8);
+    color: var(--amber);
+}
+.header a {
+    color:var(--cream);
+    text-transform:uppercase;
+    font-size: 120%;
+}
+.header :focus {
+    color:var(--amber);
+}
+.header h1 {
+    color:var(--amber);
+    font-size: 180%;
+}
+.header p {
+    color:var(--amber);
+}
+
+/* Nav section */
+.nav {
+    margin-right: 6%;
+}
+.nav ul {
+    display:inline-flex;
+    position:relative;
+    top: 80px;
+    float:right;
+}
+.nav ul li {
+    margin-left: 32px;
+}
+/* logo section */
+.logo {
+    display: inline-flex;
+    padding: 6px;
+    margin-left: 6%;
+}
+.logo-text {
+    display:block;
+    margin: auto 8px;
+}
+
+/* Start Section the home page */
+.start {
+    background-color: rgba(232,229,218,0.9);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid var(--amber);
+    display: block;
+    position: relative;
+    top: 100px;
+    width: 600px;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+}
+.start h1 {
+    font-size: 180%;
+}
+.start p {
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.form-input {
+    display: block;
+}
+.form-input button {
+    color: var(--orange);
+    font-size: 40px;
+    position: relative;
+    top: 8px;
+}
+.input {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 2px solid var(--amber);
+    width: 300px;
+    color: var(--black);
+    margin-top: 12px;
+    height: 40px;
+    padding: 6px;
+}
