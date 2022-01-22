@@ -70,15 +70,34 @@
                 <p>Are you going to a great location?</p>
                 <p>Don't know where the best watering holes are?</p>
                 <p>Plan Your Crawl is waiting for you</p>
-                <p>It all starts here - <strong>Choose your destination:</strong></p>
+                <p>It all starts here - <strong>Click the button to choose your destination</strong></p>
                 <!-- Input and Button Section here -->
                 <div class="block">
-                    <input type="text" id="location"
-                        class="input w-4/5 md:w-3/5 p-1.5 h-10 text-center rounded-md border-2 border-solid bg-white">
-                    <button class="form-input-button text-4xl top-2 relative"><i class="far fa-play-circle"></i></button>
+                    <button id="modal-btn" class="form-input-button text-4xl top-2 relative"><i class="far fa-play-circle"></i></button>
                 </div>
             </div>
         </section>
+    </div>
+
+    <div class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="map-modal">
+
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <!-- <div>
+                    Can put icon here if needed
+                </div> -->
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Where are you heading?</h3>
+                
+                <div class="items-center px-4 py-3">
+                    <input type="text" id="location"
+                        class="input w-4/5 mb-5 mt-3 p-1.5 h-10 text-center rounded-md border-2 border-solid bg-white">
+                    <button id="search-btn"
+                        class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-full shadow-sm focus:outline-none focus:ring-2">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>
