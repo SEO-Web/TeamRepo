@@ -8,7 +8,7 @@ var modalBTN = document.getElementById("modal-btn");
 var searchBTN = document.getElementById("search-btn");
 
 //Modal search value
-//var location = document.getElementById("location").value
+var location = document.getElementById("location").value
 
 /* Need code so that uses the value of search input  */
 
@@ -25,3 +25,5 @@ modalBTN.addEventListener("click", function () {
 searchBTN.addEventListener("click", function () {
     document.location.href = "pub-search.html"
 })
+
+localStorage.setItem('city', location)
