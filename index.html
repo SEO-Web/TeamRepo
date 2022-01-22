@@ -35,9 +35,9 @@
                 </div>
                 <!-- Navbar items -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="/index.html" class="py-4 px-2 transition duration-300"><i class="fas fa-home"></i></a>
-                    <a href="/pub-search.html" class="py-4 px-2 font-semibold transition duration-300 text-white md:text-base lg:text-xl uppercase">Create a Tour</a>
-                    <a href="/saved-tours.html" class="py-4 px-2 font-semibold transition duration-300 text-white md:text-base lg:text-xl uppercase">Saved Tours</a>
+                    <a href="index.html" class="py-4 px-2 transition duration-300"><i class="fas fa-home"></i></a>
+                    <a href="pub-search.html" class="py-4 px-2 font-semibold transition duration-300 text-white md:text-base lg:text-xl uppercase">Create a Tour</a>
+                    <a href="saved-tours.html" class="py-4 px-2 font-semibold transition duration-300 text-white md:text-base lg:text-xl uppercase">Saved Tours</a>
                     <a href="/contact.html" class="py-4 px-2 font-semibold transition duration-300 text-white md:text-base lg:text-xl uppercase">Contact Us</a>
                 </div>
                 <!-- Mobile menu button -->
@@ -51,10 +51,10 @@
         <!-- mobile menu -->
         <div class="hidden mobile-menu">
             <ul>
-                <li><a href="/index.html" class="block text-sm px-2 py-4 uppercase">Home</a></li>
-                <li><a href="/pub-search.html" class="block text-sm px-2 py-4 transition duration-300 uppercase">Create a Tour</a>
+                <li><a href="index.html" class="block text-sm px-2 py-4 uppercase">Home</a></li>
+                <li><a href="pub-search.html" class="block text-sm px-2 py-4 transition duration-300 uppercase">Create a Tour</a>
                 </li>
-                <li><a href="/saved-tours.html" class="block text-sm px-2 py-4 transition duration-300 uppercase">Saved Tours</a>
+                <li><a href="saved-tours.html" class="block text-sm px-2 py-4 transition duration-300 uppercase">Saved Tours</a>
                 </li>
                 <li><a href="/contact.html" class="block text-sm px-2 py-4 transition duration-300 uppercase">Contact Us</a></li>
             </ul>
@@ -83,18 +83,17 @@
 
         <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
             <div class="mt-3 text-center">
-                <!-- <div>
-                    Can put icon here if needed
-                </div> -->
+                
                 <h3 class="text-lg leading-6 font-medium text-gray-900">Where are you heading?</h3>
                 
                 <div class="items-center px-4 py-3">
-                    <input type="text" id="location"
-                        class="input w-4/5 mb-5 mt-3 p-1.5 h-10 text-center rounded-md border-2 border-solid bg-white">
-                    <button id="search-btn"
-                        class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-full shadow-sm focus:outline-none focus:ring-2">
-                        Search
-                    </button>
+                    <form id="city-search">
+                        <input type="text" id="location" class="input w-4/5 mb-5 mt-3 p-1.5 h-10 text-center rounded-md border-2 border-solid bg-white">
+                        <button id="search-btn"
+                            class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-full shadow-sm focus:outline-none focus:ring-2">
+                            Search
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

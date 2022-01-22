@@ -1,19 +1,20 @@
 // button to open nav bar on smaller screens
-var btn = document.querySelector("button.mobile-menu-button");
+var btn = document.querySelector(".mobile-menu-button");
 var menu = document.querySelector(".mobile-menu");
 
 // modal element selectors
 var mapModal = document.getElementById("map-modal");
 var modalBTN = document.getElementById("modal-btn");
 var searchBTN = document.getElementById("search-btn");
+var formEl = document.getElementById("city-search")
 
 //Modal search value
-var location = document.getElementById("location").value
+//var searchLocation = document.getElementById("location").value
 
 /* Need code so that uses the value of search input  */
 
 // Open modal when button is clicked
-btn.addEventListener("click", () => {
+btn.addEventListener("click", function () {
     menu.classList.toggle("hidden");
 });
 
@@ -22,8 +23,23 @@ modalBTN.addEventListener("click", function () {
 })
 
 // Close modal when ok clicked
-searchBTN.addEventListener("click", function () {
-    document.location.href = "pub-search.html"
-})
+function locationSearchTerm(event) {
+    event.preventDefault();
+  
+    //var searchInputVal = document.querySelector('#search-input').value;
+    var searchLocation = document.getElementById("location").value
+    
+    console.log(searchLocation)
+  
+    if (!searchLocation) {
+      console.error('You need to search for somewhere');
+      return;
+    }
+    localStorage.setItem('city', searchLocation)
+  
+    location.assign("./pub-search.html");
+}
+  
+formEl.addEventListener("submit", locationSearchTerm)
 
-localStorage.setItem('city', location)
+localStorage.setItem('city', searchLocation)
