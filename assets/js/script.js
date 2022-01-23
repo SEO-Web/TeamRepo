@@ -32,7 +32,7 @@ function locationSearchTerm(event) {
     console.log(searchLocation)
   
     if (!searchLocation) {
-      console.error('You need to search for somewhere');
+      console.error('You need to search for somewhere'); //what to put here to alert user to search for somewhere? As said no alerts
       return;
     }
     localStorage.setItem('city', searchLocation)
