@@ -1,8 +1,8 @@
 // What to do about js files - do we have one for each html page so dont get errors about event listeners that are related to a different page?
 
 // button to open nav bar on smaller screens
-var btn = document.querySelector(".mobile-menu-button");
-var menu = document.querySelector(".mobile-menu");
+var btn = document.getElementById("mobile-menu-button");
+var menu = document.getElementById("mobile-menu");
 
 // modal element selectors
 var mapModal = document.getElementById("map-modal");
