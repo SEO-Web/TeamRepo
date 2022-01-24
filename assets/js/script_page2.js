@@ -1,6 +1,3 @@
-//var tempDisplay = $("#temp");
-//var windDisplay = $("#wind");
-//var humidDisplay = $("#humid");
 var searchLocation = localStorage.getItem("city");
 
 
