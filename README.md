@@ -35,3 +35,18 @@ When I view the weather
 Then I am presented with the weather conditions, the temperature, the UV index, the rain and the wind speed
 When I click on a stored route
 Then I am taken to the map of this route showing the locations on that route
+
+Usage:
+When you arrive at our website you will be greeted with the landing page that looks like this. 
+<img src='/assets/images/landing-page.png' alt='Screenshot of the landing page'>
+To start planing your next brewery tour simply click the Play icon to choose your destination. 
+<img src='/assets/images/play.png' alt='Screenshot of the play button'>
+You will then be asked to type in the name of the city you would like to search. Once you have typed a city name press the orange search button.
+<img src='/assets/images/search.png' alt='screenshot of the orange searchbar'>
+You will then be taken to a new page with a map of the area and all the pubs, brewerys, bottleshops etc with in the area. 
+<img src='/assets/images/map.png>' alt='Screenshot of the map page.'>
+If you have used our website in the past and enjoyed the tour and would like to do it again, simply click the saved tours section in the top right corner of the page.
+<img src='saved-tours' alt='Screenshot / close up of the saved tours setion'>
+<br>
+Authors and acknowledgment
+DanLawrence91, SEO-Web, urorachama, skipsterling
