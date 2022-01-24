@@ -40,6 +40,9 @@ h4 {
     color:var(--black);
     font-size: 120%;
 }
+hr {
+    color: var(--orange);
+}
 /* classes */
 
 /* home page bg - this is currently inline style css is not applying. */
@@ -95,4 +98,32 @@ h4 {
 }
 .modal-search {
     background-color: var(--amber);
+}
+/* pub-search page */
+.location {
+    background-color:var(--black);
+    border: 4px solid var(--blue);
+    padding: 12px;
+    color: var(--cream);
+    height: 100vh;
+}
+.location h1 {
+    color: var(--amber);
+    font-size: 160%;
+    line-height: 1.8;
+}
+.location h3 {
+    color: var(--amber);
+    font-size: 140%;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.location h4 {
+    color: var(--blue);
+    font-size: 120%;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.location ul li {
+    border-bottom: 1px dashed var(--cream);
 }
