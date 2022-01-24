@@ -11,9 +11,6 @@ var searchBTN = document.getElementById("search-btn");
 var formEl = document.getElementById("city-search")
 var closeEl = document.getElementById("closeBtn")
 
-//Modal search value
-//var searchLocation = document.getElementById("location").value
-
 /* Need code so that uses the value of search input  */
 
 // Open modal when button is clicked
