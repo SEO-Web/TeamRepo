@@ -9,6 +9,7 @@ var mapModal = document.getElementById("map-modal");
 var modalBTN = document.getElementById("modal-btn");
 var searchBTN = document.getElementById("search-btn");
 var formEl = document.getElementById("city-search")
+var closeEl = document.getElementById("closeBtn")
 
 //Modal search value
 //var searchLocation = document.getElementById("location").value
@@ -22,6 +23,10 @@ btn.addEventListener("click", function () {
 
 modalBTN.addEventListener("click", function () {
     mapModal.style.display = "block";
+})
+
+closeEl.addEventListener("click", function () {
+    mapModal.style.display = "none";
 })
 
 // Close modal when ok clicked
