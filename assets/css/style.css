@@ -73,6 +73,9 @@ h4 {
 .header p {
     color:var(--amber);
 }
+.nav-active {
+    color:var(--amber) !important;
+}
 
 /* Start Section the home page */
 .start {
