@@ -1,0 +1,172 @@
+/* Global Elements */
+:root {
+    --cream:#e8e5da;
+    --black:#222222;
+    --amber:#eb6534;
+    --orange:#ff5714;
+    --blue:#197bbd;
+}
+
+/* Elements */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size:180%;
+}
+h2 {font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 160%;
+}
+h3 {
+    font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 140%;
+}
+h4 {
+    font-family: 'Merriweather', serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 120%;
+}
+hr {
+    color: var(--orange);
+}
+/* classes */
+
+/* home page bg - this is currently inline style css is not applying. */
+.home {
+    background-image:url('../images/beer.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100vh;
+}
+
+/* header section */
+.header {
+    background-color: rgba(34,34,34,0.8);
+    color: var(--amber);
+}
+.header a {
+    color:var(--cream);
+}
+.header :focus {
+    color:var(--amber);
+}
+.header :hover {
+    color: var(--amber);
+}
+.header h1 {
+    color:var(--amber);
+}
+.header p {
+    color:var(--amber);
+}
+.nav-active {
+    color:var(--amber) !important;
+}
+
+/* Start Section the home page */
+.start {
+    background-color: rgba(232,229,218,0.9);
+    border: var(--amber);
+}
+.start p {
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.form-input-button {
+    color: var(--orange);
+}
+.input {
+    border: var(--amber);
+    color: var(--black);
+}
+.modal-search {
+    background-color: var(--amber);
+}
+/* pub-search page */
+.location {
+    background-color:var(--black);
+    border: 4px solid var(--blue);
+    padding: 12px;
+    color: var(--cream);
+    height: 100vh;
+}
+.location h1 {
+    color: var(--amber);
+    font-size: 160%;
+    line-height: 1.8;
+}
+.location h3 {
+    color: var(--amber);
+    font-size: 140%;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.location h4 {
+    color: var(--blue);
+    font-size: 120%;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.location ul li {
+    border-bottom: 1px dashed var(--cream);
+}
+/* Save tours page */
+.saved-tours {
+    background-color:rgba(34,34,34,0.8);
+    color: var(--cream);
+    text-align: center;
+}
+.saved-tours h1 {
+    color: var(--amber);
+    font-size: 160%;
+    line-height: 1.8;
+    padding-top:30px;
+}
+/* Centers table on saved tours page */
+.saved-tours table {
+    margin-left:auto;
+    margin-right: auto;
+}
+/* TOP PARAGRAPH ON SAVE PAGE */
+.top-content {
+    padding-bottom: 30px;
+}
+/* Saved location tables */
+.saved {
+    background-color:var(--black);
+    border: 4px solid var(--blue);
+    padding: 12px;
+    color: var(--cream);
+}
+.saved h3 {
+    color: var(--amber);
+    font-size: 140%;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.saved h4 {
+    color: var(--blue);
+    font-size: 120%;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+.saved ul li {
+    border-bottom: 1px dashed var(--cream);
+}
