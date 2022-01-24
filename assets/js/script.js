@@ -1,9 +1,5 @@
 // What to do about js files - do we have one for each html page so dont get errors about event listeners that are related to a different page?
 
-// button to open nav bar on smaller screens
-var btn = document.getElementById("mobile-menu-button");
-var menu = document.getElementById("mobile-menu");
-
 // modal element selectors
 var mapModal = document.getElementById("map-modal");
 var modalBTN = document.getElementById("modal-btn");
@@ -13,10 +9,6 @@ var closeEl = document.getElementById("closeBtn")
 
 /* Need code so that uses the value of search input  */
 
-// Open modal when button is clicked
-btn.addEventListener("click", function () {
-    menu.classList.toggle("hidden");
-});
 
 modalBTN.addEventListener("click", function () {
     mapModal.style.display = "block";
