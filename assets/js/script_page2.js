@@ -11,7 +11,6 @@ function getWeather(){
     var responseUrl = "http://api.openweathermap.org/data/2.5/weather?";
     const apiKey = "5900a658e9006d2a5eb37e656c2e92d5";    
     responseUrl += "q=" + position + "&appid=" + apiKey + "&units=metric";
-    //weatherUrl.textContent = responseUrl;
 
     $.getJSON(responseUrl, function(data){
     console.log(data);
