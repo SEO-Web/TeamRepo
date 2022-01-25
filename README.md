@@ -40,4 +40,4 @@ The future developments for this webpage are:
 - Data base intergration, Storing tours in a data base for future use.
 - Contact form, implimenting a contact form so that users can share their best crawls.
 Authors and acknowledgment
-DanLawrence91, SEO-Web, urorachama, skipsterling
+DanLawrence91, SEO-Web, urorachama, skipsterling.
