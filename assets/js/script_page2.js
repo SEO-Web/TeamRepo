@@ -12,6 +12,7 @@ function getWeather(){
     const apiKey = "5900a658e9006d2a5eb37e656c2e92d5";    
     responseUrl += "q=" + searchLocation + "&appid=" + apiKey + "&units=metric";
 
+    console.log(responseUrl)
     $.getJSON(responseUrl, function(data){
         //debugging
         console.log(data);
