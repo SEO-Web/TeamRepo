@@ -18,7 +18,7 @@ function getWeather(){
         var knot = data.wind.speed/1.852;    
         $("#city-search").text(searchLocation);
         $("#temp").text(Math.round(data.main.temp) + ' °Celsius / ' + Math.round(fareheight) + ' °Fareheight');
-        $("#wind").text((data.wind.speed*3.6).toFixed(1) + ' km/h / '+ (data.wind.speed/0.44704).toFixed(1) + 'mph ' + knot.toFixed(1) + ' knot');
+        $("#wind").text((data.wind.speed*3.6).toFixed(1) + ' kmh / '+ (data.wind.speed/0.44704).toFixed(1) + 'mph ' + knot.toFixed(1) + ' knots');
         $("#humid").text(data.main.humidity + '%');
 
 });
@@ -36,7 +36,7 @@ function getBrewery(){
         console.log(data);
         for(var i=0; i<data.length; i++){
             var $breweryData = document.createElement("li");
-            $breweryData.textContent += data[i].name;
+            $breweryData.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url;
             $breweryData.classList.add("breweryResult");
             $breweryData.setAttribute("data-value", i);
             $breweryDisplay.appendChild($breweryData);
