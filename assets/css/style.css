@@ -126,6 +126,9 @@ hr {
 .location ul li {
     border-bottom: 1px dashed var(--cream);
 }
+.map ul li {
+    color: #fff;
+}
 /* search result */
 .search-result th {
     text-align: left;
