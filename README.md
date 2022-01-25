@@ -33,5 +33,11 @@ If you have used our website in the past and enjoyed the tour and would like to 
 <img src='saved-tours' alt='Screenshot / close up of the saved tours setion'>
 
 ## Future Developments
+The future developments for this webpage are:
+- Looking to expand internationally. 
+- Turn tours into PDFs so that that a hard copy can be printed in order to make sharing easier.
+- Sharing your tours via your social channels with friends and family.
+- Data base intergration, Storing tours in a data base for future use.
+- Contact form, implimenting a contact form so that users can share their best crawls.
 Authors and acknowledgment
 DanLawrence91, SEO-Web, urorachama, skipsterling
