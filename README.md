@@ -1,22 +1,6 @@
 # TeamRepo
-Brewery crawl:
-
-Website api openbrewerydb.org
-Mvp - people wanting to do a pub crawl but don’t know where start or even where to go.
-
-This app will show a list of breweries, types of breweries, phone number of said brewery  in the area you select and give you the fastest route from one to the next.
-Build a map to show fastest route. 
-Pdf share because local storage won’t share. 
-
-- Share by appending the list of breweries to the query string? 
-
-- Once you have your brewery crawl you can then share it with your friends on their socials.
-
-- Background image taps, or beer etc something related. 
-
-- Another page showing staged tours (previous tours) (two to a row) 
-
-- Link to [wireframe](https://docs.google.com/presentation/d/1sa57tjAPviC49wgRLB6-E4JoyQ3QfeO553_733RTJrc/edit#slide=id.p)
+Plan Your Crawl:
+A website that allows you to create a tour to all or some of the breweries in your area while having the ability to dress accordingly with the built in weather forecast.
 
 ## User Story
 As someone looking to visit a new city, I want to enter that city into the application and find a list of breweries along with their location so that I can develop a route to visit different breweries and bottleshops in that city, and find the best route between them, along with the weather for that day.
@@ -36,7 +20,7 @@ Then I am presented with the weather conditions, the temperature, the UV index, 
 When I click on a stored route
 Then I am taken to the map of this route showing the locations on that route
 
-Usage:
+## Usage:
 When you arrive at our website you will be greeted with the landing page that looks like this. 
 <img src='/assets/images/landing-page.png' alt='Screenshot of the landing page'>
 To start planing your next brewery tour simply click the Play icon to choose your destination. 
@@ -47,6 +31,7 @@ You will then be taken to a new page with a map of the area and all the pubs, br
 <img src='/assets/images/map.png>' alt='Screenshot of the map page.'>
 If you have used our website in the past and enjoyed the tour and would like to do it again, simply click the saved tours section in the top right corner of the page.
 <img src='saved-tours' alt='Screenshot / close up of the saved tours setion'>
-<br>
+
+## Future Developments
 Authors and acknowledgment
 DanLawrence91, SEO-Web, urorachama, skipsterling
