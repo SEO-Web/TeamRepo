@@ -132,6 +132,9 @@ hr {
     padding-right: 12px;
 }
 
+.map ul li {
+    color:#fff;
+}
 /* Save tours page */
 .saved-tours {
     background-color:rgba(34,34,34,0.8);
