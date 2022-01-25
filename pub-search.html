@@ -18,101 +18,131 @@
 </head>
 
 <body class="home font-extralight text-base">
-    <!-- Header and Nav bar -->
-    <nav class="header pt-1">
-        <div class="max-w mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="space-x-7 inline-flex">
-                    <!-- Website Logo -->
-                    <img class="h-20 w-20 mr-2" src="assets/images/beer-icon.png" alt="beer icon" />
-                    <div class="block my-auto mx-2">
-                        <h1 class="text-white text-2xl">Plan Your Crawl</h1>
-                        <p>Drive safely,<br>
-                            we encourage responsible<br>
-                            service & drinking of alcohol</p>
+
+    <!-- Age verification modal -->
+    <div id="age-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <!-- change rest of page to grey with focus on modal -->
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <!-- Modal outline  -->
+            <div class="my-4 text-center">
+                <p class="text-lg leading-6 font-medium text-gray-900">Please confirm below that you are over the age of
+                    21:</p>
+                <!-- class for headings asking age -->
+                <div class="my-4">
+                    <!-- class for buttons to click yes or no -->
+                    <form id="age-veri">
+                        <button id="no-btn"
+                            class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-2/5 mx-2">No</button>
+                        <button id="yes-btn"
+                            class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-2/5 mx-2">Yes</button>
+                    </form>
+                    <div id="underage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-section" class="hidden">
+        <!-- Header and Nav bar -->
+        <nav class="header pt-1">
+            <div class="max-w mx-auto px-4">
+                <div class="flex justify-between">
+                    <div class="space-x-7 inline-flex">
+                        <!-- Website Logo -->
+                        <img class="h-20 w-20 mr-2" src="assets/images/beer-icon.png" alt="beer icon" />
+                        <div class="block my-auto mx-2">
+                            <h1 class="text-white text-2xl">Plan Your Crawl</h1>
+                            <p>Drive safely,<br>
+                                we encourage responsible<br>
+                                service & drinking of alcohol</p>
+                        </div>
+                    </div>
+                    <!-- Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2"><i class="fas fa-home"></i></a>
+                        <a href="pub-search.html"
+                            class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase nav-active">Create
+                            a Tour</a>
+                        <a href="saved-tours.html"
+                            class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase">Saved Tours</a>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button">
+                            <i class="fas fa-bars fa-2x"></i>
+                        </button>
                     </div>
                 </div>
-                <!-- Navbar items -->
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.html" class="py-4 px-2"><i class="fas fa-home"></i></a>
-                    <a href="pub-search.html" class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase nav-active">Create a Tour</a>
-                    <a href="saved-tours.html" class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase">Saved Tours</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button">
-                        <i class="fas fa-bars fa-2x"></i>
-                    </button>
-                </div>
             </div>
-        </div>
-        <!-- mobile menu -->
-        <div class="hidden" id="mobile-menu">
-            <ul>
-                <li><a href="index.html" class="block text-sm px-2 py-4 uppercase">Home</a></li>
-                <li><a href="pub-search.html" class="block text-sm px-2 py-4 uppercase nav-active">Create a Tour</a></li>
-                <li><a href="saved-tours.html" class="block text-sm px-2 py-4 uppercase">Saved Tours</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Content section -->
-    <section class="search-result">
-        <div class="lg:flex lg:flex-row">
-            <!-- left side to hold location title weather and list of items -->
-            <div class="location lg:h-screen w-9/12 lg:w-1/3 mx-auto">
-                <h1 id="city-search"></h1>
-                <h3 id="weather">Weather</h3>
-                <table>
-                    <t-body>
-                        <tr>
-                            <!-- display of temperature-->
-                            <th>Temperature</th>
-                            <td id="temp"></td>
-                        </tr>
-                        <tr>
-                            <!-- display of wind speed-->
-                            <th>Wind</th>
-                            <td id="wind"></td>
-                        </tr>
-                        <tr>
-                            <!-- display of humidity-->
-                            <th>Humidity</th>
-                            <td id="humid"></td>
-                        </tr>
-                    </t-body>
-                </table>
-                <hr>
-                <!-- TODO populate tour destinations from map -->
-                <h3>Your Crawl</h3>
-                <p>Add your stops to create your tour</p>
-                <!-- TODO populate through js append items -->
-                <ul id="stops">
-                    <li>
-                        <h4>Pub Name</h4>
-                        <p>Address</p>
-                        <p>Website</p>
+            <!-- mobile menu -->
+            <div class="hidden" id="mobile-menu">
+                <ul>
+                    <li><a href="index.html" class="block text-sm px-2 py-4 uppercase">Home</a></li>
+                    <li><a href="pub-search.html" class="block text-sm px-2 py-4 uppercase nav-active">Create a Tour</a>
                     </li>
-
+                    <li><a href="saved-tours.html" class="block text-sm px-2 py-4 uppercase">Saved Tours</a></li>
                 </ul>
-
             </div>
-            <!-- map side -->
-            <div class="lg:h-screen lg:basis-2/3">
-                <div>
-                    <ul id="brewery-display">
+        </nav>
+
+        <!-- Content section -->
+        <section class="search-result">
+            <div class="lg:flex lg:flex-row">
+                <!-- left side to hold location title weather and list of items -->
+                <div class="location lg:h-screen w-9/12 lg:w-1/3 mx-auto">
+                    <h1 id="city-search"></h1>
+                    <h3 id="weather">Weather</h3>
+                    <table>
+                        <t-body>
+                            <tr>
+                                <!-- display of temperature-->
+                                <th>Temperature</th>
+                                <td id="temp"></td>
+                            </tr>
+                            <tr>
+                                <!-- display of wind speed-->
+                                <th>Wind</th>
+                                <td id="wind"></td>
+                            </tr>
+                            <tr>
+                                <!-- display of humidity-->
+                                <th>Humidity</th>
+                                <td id="humid"></td>
+                            </tr>
+                        </t-body>
+                    </table>
+                    <hr>
+                    <!-- TODO populate tour destinations from map -->
+                    <h3>Your Crawl</h3>
+                    <p>Add your stops to create your tour</p>
+                    <!-- TODO populate through js append items -->
+                    <ul id="stops">
+                        <li>
+                            <h4>Pub Name</h4>
+                            <p>Address</p>
+                            <p>Website</p>
+                        </li>
+
                     </ul>
+
                 </div>
-                <!-- If we want to add Google map? as there are coordinates in Open Brewery API-->
+                <!-- map side -->
+                <div class="lg:h-screen lg:basis-2/3">
+                    <div>
+                        <ul id="brewery-display">
+                        </ul>
+                    </div>
+                    <!-- If we want to add Google map? as there are coordinates in Open Brewery API-->
+                </div>
             </div>
-        </div>
 
 
-    </section>
+        </section>
+    </div>
 
-    
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/script_page2.js"></script>
 </body>

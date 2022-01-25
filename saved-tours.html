@@ -18,149 +18,185 @@
 </head>
 
 <body class="home font-extralight text-base">
-    <!-- Header and Nav bar -->
-    <nav class="header pt-1">
-        <div class="max-w mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="space-x-7 inline-flex">
-                    <!-- Website Logo -->
-                    <img class="h-20 w-20 mr-2" src="assets/images/beer-icon.png" alt="beer icon" />
-                    <div class="block my-auto mx-2">
-                        <h1 class="text-white text-2xl">Plan Your Crawl</h1>
-                        <p>Drive safely,<br>
-                            we encourage responsible<br>
-                            service & drinking of alcohol</p>
+
+    <!-- Age verification modal -->
+    <div id="age-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <!-- change rest of page to grey with focus on modal -->
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <!-- Modal outline  -->
+            <div class="my-4 text-center">
+                <p class="text-lg leading-6 font-medium text-gray-900">Please confirm below that you are over the age of
+                    21:</p>
+                <!-- class for headings asking age -->
+                <div class="my-4">
+                    <!-- class for buttons to click yes or no -->
+                    <form id="age-veri">
+                        <button id="no-btn"
+                            class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-2/5 mx-2">No</button>
+                        <button id="yes-btn"
+                            class="modal-search px-4 py-2 text-white text-base font-medium rounded-md w-2/5 mx-2">Yes</button>
+                    </form>
+                    <div id="underage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-section" class="hidden">
+        <!-- Header and Nav bar -->
+        <nav class="header pt-1">
+            <div class="max-w mx-auto px-4">
+                <div class="flex justify-between">
+                    <div class="space-x-7 inline-flex">
+                        <!-- Website Logo -->
+                        <img class="h-20 w-20 mr-2" src="assets/images/beer-icon.png" alt="beer icon" />
+                        <div class="block my-auto mx-2">
+                            <h1 class="text-white text-2xl">Plan Your Crawl</h1>
+                            <p>Drive safely,<br>
+                                we encourage responsible<br>
+                                service & drinking of alcohol</p>
+                        </div>
+                    </div>
+                    <!-- Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2"><i class="fas fa-home"></i></a>
+                        <a href="pub-search.html"
+                            class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase">Create a Tour</a>
+                        <a href="saved-tours.html"
+                            class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase nav-active">Saved
+                            Tours</a>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button">
+                            <i class="fas fa-bars fa-2x"></i>
+                        </button>
                     </div>
                 </div>
-                <!-- Navbar items -->
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.html" class="py-4 px-2"><i class="fas fa-home"></i></a>
-                    <a href="pub-search.html" class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase">Create a Tour</a>
-                    <a href="saved-tours.html" class="py-4 px-2 font-medium text-white md:text-base lg:text-xl uppercase nav-active">Saved Tours</a>
+            </div>
+            <!-- mobile menu -->
+            <div class="hidden" id="mobile-menu">
+                <ul>
+                    <li><a href="index.html" class="block text-sm px-2 py-4 uppercase">Home</a></li>
+                    <li><a href="pub-search.html" class="block text-sm px-2 py-4 uppercase">Create a Tour</a></li>
+                    <li><a href="saved-tours.html" class="block text-sm px-2 py-4 uppercase nav-active">Saved Tours</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Content section -->
+        <section class="saved-tours">
+            <h1>Your Saved Crawls</h1>
+            <p class="top-content">Your save crawls are stored locally on your machine - be sure to not clear your
+                browser cache!</p>
+            <div class="w-9/12 lg:flex lg:flex-row justify-between mx-auto lg:w-screen">
+                <div class="basis-1/3 mx-3px saved">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52347.66198300591!2d138.568500770129!3d-34.91325292563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs%20adelaide!5e0!3m2!1sen!2sau!4v1642990677834!5m2!1sen!2sau"
+                        width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <h3>Adelaide</h3>
+                    <h4 id="weather">Weather</h4>
+                    <table>
+                        <t-body>
+                            <tr>
+                                <th>Temperature</th>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <th>Wind</th>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <th>Rainfall</th>
+                                <td>ID</td>
+                            </tr>
+                        </t-body>
+                    </table>
+                    <hr>
+                    <!-- TODO populate through js append items -->
+                    <ul id="stops">
+                        <li>
+                            <h4>Pub Name</h4>
+                            <p>Address</p>
+                            <p>Website</p>
+                        </li>
+
+                    </ul>
                 </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button">
-                        <i class="fas fa-bars fa-2x"></i>
-                    </button>
+
+                <div class="basis-1/3 mx-3px saved">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52347.66198300591!2d138.568500770129!3d-34.91325292563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs%20adelaide!5e0!3m2!1sen!2sau!4v1642990677834!5m2!1sen!2sau"
+                        width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <h3>Adelaide</h3>
+                    <h4 id="weather">Weather</h4>
+                    <table>
+                        <t-body>
+                            <tr>
+                                <th>Temperature</th>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <th>Wind</th>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <th>Rainfall</th>
+                                <td>ID</td>
+                            </tr>
+                        </t-body>
+                    </table>
+                    <hr>
+                    <!-- TODO populate through js append items -->
+                    <ul id="stops">
+                        <li>
+                            <h4>Pub Name</h4>
+                            <p>Address</p>
+                            <p>Website</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="basis-1/3 mx-3px saved">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52347.66198300591!2d138.568500770129!3d-34.91325292563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs%20adelaide!5e0!3m2!1sen!2sau!4v1642990677834!5m2!1sen!2sau"
+                        width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <h3>Adelaide</h3>
+                    <h4 id="weather">Weather</h4>
+                    <table>
+                        <t-body>
+                            <tr>
+                                <th>Temperature</th>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <th>Wind</th>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <th>Rainfall</th>
+                                <td>ID</td>
+                            </tr>
+                        </t-body>
+                    </table>
+                    <hr>
+                    <!-- TODO populate through js append items -->
+                    <ul id="stops">
+                        <li>
+                            <h4>Pub Name</h4>
+                            <p>Address</p>
+                            <p>Website</p>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
-        </div>
-        <!-- mobile menu -->
-        <div class="hidden" id="mobile-menu">
-            <ul>
-                <li><a href="index.html" class="block text-sm px-2 py-4 uppercase">Home</a></li>
-                <li><a href="pub-search.html" class="block text-sm px-2 py-4 uppercase">Create a Tour</a></li>
-                <li><a href="saved-tours.html" class="block text-sm px-2 py-4 uppercase nav-active">Saved Tours</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Content section -->
-    <section class="saved-tours">
-        <h1>Your Saved Crawls</h1>
-        <p class="top-content">Your save crawls are stored locally on your machine - be sure to not clear your browser cache!</p>
-        <div class="w-9/12 lg:flex lg:flex-row justify-between mx-auto lg:w-screen">
-            <div class="basis-1/3 mx-3px saved">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52347.66198300591!2d138.568500770129!3d-34.91325292563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs%20adelaide!5e0!3m2!1sen!2sau!4v1642990677834!5m2!1sen!2sau" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <h3>Adelaide</h3>
-                <h4 id="weather">Weather</h4>
-                <table>
-                    <t-body>
-                        <tr>
-                            <th>Temperature</th>
-                            <td>ID</td>
-                        </tr>
-                        <tr>
-                            <th>Wind</th>
-                            <td>ID</td>
-                        </tr>
-                        <tr>
-                            <th>Rainfall</th>
-                            <td>ID</td>
-                        </tr>
-                    </t-body>
-                </table>
-                <hr>
-                <!-- TODO populate through js append items -->
-                <ul id="stops">
-                    <li>
-                        <h4>Pub Name</h4>
-                        <p>Address</p>
-                        <p>Website</p>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="basis-1/3 mx-3px saved">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52347.66198300591!2d138.568500770129!3d-34.91325292563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs%20adelaide!5e0!3m2!1sen!2sau!4v1642990677834!5m2!1sen!2sau" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <h3>Adelaide</h3>
-                <h4 id="weather">Weather</h4>
-                <table>
-                    <t-body>
-                        <tr>
-                            <th>Temperature</th>
-                            <td>ID</td>
-                        </tr>
-                        <tr>
-                            <th>Wind</th>
-                            <td>ID</td>
-                        </tr>
-                        <tr>
-                            <th>Rainfall</th>
-                            <td>ID</td>
-                        </tr>
-                    </t-body>
-                </table>
-                <hr>
-                <!-- TODO populate through js append items -->
-                <ul id="stops">
-                    <li>
-                        <h4>Pub Name</h4>
-                        <p>Address</p>
-                        <p>Website</p>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="basis-1/3 mx-3px saved">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52347.66198300591!2d138.568500770129!3d-34.91325292563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs%20adelaide!5e0!3m2!1sen!2sau!4v1642990677834!5m2!1sen!2sau" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <h3>Adelaide</h3>
-                <h4 id="weather">Weather</h4>
-                <table>
-                    <t-body>
-                        <tr>
-                            <th>Temperature</th>
-                            <td>ID</td>
-                        </tr>
-                        <tr>
-                            <th>Wind</th>
-                            <td>ID</td>
-                        </tr>
-                        <tr>
-                            <th>Rainfall</th>
-                            <td>ID</td>
-                        </tr>
-                    </t-body>
-                </table>
-                <hr>
-                <!-- TODO populate through js append items -->
-                <ul id="stops">
-                    <li>
-                        <h4>Pub Name</h4>
-                        <p>Address</p>
-                        <p>Website</p>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
 
 
-    </section>
-    
+        </section>
+    </div>
 
     <script src="assets/js/nav.js"></script>
 </body>
