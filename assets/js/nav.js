@@ -31,9 +31,6 @@ noBtn.addEventListener("click", function (event) {
     tooYoung.append(warning);
     sessionStorage.setItem("ageConfirmation", "No")
 
-
-
-
 })
 
 var ageConf = sessionStorage.getItem("ageConfirmation")
