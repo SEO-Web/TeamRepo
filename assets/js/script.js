@@ -45,7 +45,7 @@ formEl.addEventListener("submit", locationSearchTerm);
 yesBtn.addEventListener("click", function (event) {
     event.preventDefault();
     ageModal.style.display = "none";
-    mainSection.style.display = "block"
+    mainSection.style.display = "block";
 })
 
 noBtn.addEventListener("click", function (event) {

@@ -126,6 +126,12 @@ hr {
 .location ul li {
     border-bottom: 1px dashed var(--cream);
 }
+/* search result */
+.search-result th {
+    text-align: left;
+    padding-right: 12px;
+}
+
 /* Save tours page */
 .saved-tours {
     background-color:rgba(34,34,34,0.8);
