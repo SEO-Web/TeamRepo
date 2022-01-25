@@ -41,3 +41,8 @@ The future developments for this webpage are:
 - Contact form, implimenting a contact form so that users can share their best crawls.
 Authors and acknowledgment
 DanLawrence91, SEO-Web, urorachama, skipsterling.
+
+## Credits
+Credits go to the Open Brewery data base https://www.openbrewerydb.org/
+Created and maintained by Chris J Mears and Wandering Leaf Studios LLC.
+
