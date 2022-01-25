@@ -4,6 +4,7 @@ var searchLocation = localStorage.getItem("city");
 
 // putting weather data from open weather api
 //TODO: button to change weather display?(C,F,Kelvin)
+// TODO: Units
 function getWeather(){
     //var display = "";
     var position = searchLocation;
