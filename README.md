@@ -34,15 +34,16 @@ If you have used our website in the past and enjoyed the tour and would like to 
 
 ## Future Developments
 The future developments for this webpage are:
+- Adding a ride share service from with in the website so participants can move from one brewery to the next   with ease. Once they have completed the tour they can arrive home safely all without having to divert from the webpage.
 - Looking to expand internationally. 
 - Turn tours into PDFs so that that a hard copy can be printed in order to make sharing easier.
 - Sharing your tours via your social channels with friends and family.
 - Data base intergration, Storing tours in a data base for future use.
 - Contact form, implimenting a contact form so that users can share their best crawls.
-Authors and acknowledgment
-DanLawrence91, SEO-Web, urorachama, skipsterling.
+Authors and acknowledgment.
+DanLawrence91, SEO-Web, urorachama, skipsterling
 
 ## Credits
 Credits go to the Open Brewery data base https://www.openbrewerydb.org/
-Created and maintained by Chris J Mears and Wandering Leaf Studios LLC.
+Created and maintained by Chris J Mears and Wandering Leaf Studios LLC
 
