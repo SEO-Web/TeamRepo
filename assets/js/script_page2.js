@@ -36,7 +36,7 @@ function getBrewery(){
         console.log(data);
         for(var i=0; i<data.length; i++){
             var $breweryData = document.createElement("li");
-            $breweryData.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url;
+            $breweryData.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url + ' | Latititude: ' + data[i].latitude + ' | Longitude: ' + data[i].longitude;
             $breweryData.classList.add("breweryResult");
             $breweryData.setAttribute("data-value", i);
             $breweryDisplay.appendChild($breweryData);
