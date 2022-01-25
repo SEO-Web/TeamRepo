@@ -4,11 +4,11 @@
 var mapModal = document.getElementById("map-modal");
 var modalBTN = document.getElementById("modal-btn");
 var searchBTN = document.getElementById("search-btn");
-var formEl = document.getElementById("city-search")
-var closeEl = document.getElementById("closeBtn")
+var formEl = document.getElementById("city-search");
+var closeEl = document.getElementById("closeBtn");
+
 
 /* Need code so that uses the value of search input  */
-
 
 modalBTN.addEventListener("click", function () {
     mapModal.style.display = "block";
@@ -23,7 +23,7 @@ function locationSearchTerm(event) {
     event.preventDefault();
   
     //var searchInputVal = document.querySelector('#search-input').value;
-    var searchLocation = document.getElementById("location").value
+    var searchLocation = document.getElementById("location").value;
     
     console.log(searchLocation)
   
@@ -31,10 +31,11 @@ function locationSearchTerm(event) {
       console.error('You need to search for somewhere'); //what to put here to alert user to search for somewhere? As said no alerts
       return;
     }
-    localStorage.setItem('city', searchLocation)
+    localStorage.setItem('city', searchLocation);
   
     location.assign("./pub-search.html");
 }
   
-formEl.addEventListener("submit", locationSearchTerm)
+formEl.addEventListener("submit", locationSearchTerm);
+
 
