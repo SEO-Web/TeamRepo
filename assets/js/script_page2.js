@@ -6,13 +6,13 @@ var tourBtn = document.querySelector("testing");
 // pulling weather data from open weather api
 function getWeather(){
     //debugging
-    console.log(searchLocation);
+    //console.log(searchLocation);
 
     var responseUrl = "http://api.openweathermap.org/data/2.5/weather?";
     const apiKey = "5900a658e9006d2a5eb37e656c2e92d5";    
     responseUrl += "q=" + searchLocation + "&appid=" + apiKey + "&units=metric";
 
-    console.log(responseUrl)
+    //console.log(responseUrl)
     $.getJSON(responseUrl, function(data){
         //debugging
         console.log(data);
@@ -37,17 +37,32 @@ function getBrewery(){
 
     $.getJSON(responseUrl, function(data){
         //debugging
-        console.log(data);
+        //console.log(data);
+        localStorage.setItem("data", JSON.stringify(data));
+        
         for(var i=0; i<data.length; i++){
-            var $breweryData = document.createElement("li");
+            //add detail of each brewery
+            var $breweryData = document.createElement("p");
+            //add button to Add tour
+            var $selectBtn = document.createElement("button");
+            //add br element (spacing bewteen each line)
+            var $spacing = document.createElement("br");
+
+            //detail of each brewery
             $breweryData.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street  + ' | Website: ' + data[i].website_url;
             $breweryData.classList.add("brewery-result");
             $breweryData.setAttribute("data-value", i);
-            $breweryDisplay.appendChild($breweryData);
 
+            //button to Add tour
+            $selectBtn.classList.add("tour-btn");
+            $selectBtn.setAttribute("id", i);
+            $selectBtn.textContent= "Add to Tour";
+
+            $breweryDisplay.appendChild($breweryData);
+            $breweryDisplay.appendChild($selectBtn);
+            $breweryDisplay.appendChild($spacing);
             }
 })
-
 }
 
 function addToTour(){
@@ -57,9 +72,9 @@ function addToTour(){
 
     $.getJSON(responseUrl, function(data){
         for(var i=0; i<data.length; i++){
-            var $brewerySelected = document.createElement("li");
+            var $brewerySelected = document.createElement("p");
             $brewerySelected.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street  + ' | Website: ' + data[i].website_url;
-            $brewerySelected.classList.add("brewery-result");
+            $brewerySelected.classList.add("tour");
             $brewerySelected.setAttribute("data-value", i);
             $breweryTour.appendChild($brewerySelected);
 
@@ -68,4 +83,6 @@ function addToTour(){
 }
 
 $(document).ready(getWeather());
-tourBtn.addEventListener("click",addToTour());
+
+var $selectBtn = document.getElementsByClassName("tour-btn");
+$selectBtn.on("click",addToTour());
