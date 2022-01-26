@@ -34,9 +34,8 @@ function getBrewery(){
 
     $.getJSON(responseUrl, function(data){
         //debugging
-        console.log(data);
+        //console.log(data);
         localStorage.setItem("data", JSON.stringify(data));
-        console.log(data[0].latitude)
         
         for(var i=0; i<data.length; i++){
             var $breweryData = document.createElement("li");

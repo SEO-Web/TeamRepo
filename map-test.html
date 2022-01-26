@@ -466,20 +466,24 @@
       }
     </script>
     <script>
+      var storedPubs = JSON.parse(localStorage.getItem("data"))
+      //console.log(storedPubs)
+      //console.log(storedPubs.length)
+
+      var pubLocation = []
+      for(var i=0; i<storedPubs.length; i++) {
+        pubLocation[i] = {"title":storedPubs[i].name,"address1":storedPubs[i].street,"address2":storedPubs[i].website_url,"coords":{"lat":storedPubs[i].latitude,"lng":storedPubs[i].longitude}
+      };}
+      
+
+      //console.log(pubLocation)
       const CONFIGURATION = {
-        "locations": [
-          {"title":"10 Barrel Brewing Co","address1":"1501 E St","address2":"http://10barrel.com","coords":{"lat":32.714813,"lng":-117.129593}},
-          {"title":"2Kids Brewing Company","address1":"8680 Miralani Dr Ste 123","address2":"http://www.2kidsBrewing.com","coords":{"lat":32.896584,"lng":-117.137429}},
-          {"title":"Abnormal Beer Company","address1":"16990 Via Tazon Ste 123","address2":"https://abnormalbeer.co/","coords":{"lat":33.02457764082481,"lng":-117.0857032386189}},
-          {"title":"Acoustic Ales Brewing Experiment","address1":"1795 Hancock St Ste P1 ","address2":"ttp://www.acousticales.com","coords":{"lat":32.742769479427686,"lng":-117.1838926539642}},
-          {"title":"AleSmith Brewing Co","address1":"9990 Alesmith Ct","address2":"http://www.alesmith.com","coords":{"lat":32.88908011131218,"lng":-117.14942084654729}},
-          {"title":"Align Brewing Co","address1":"8680 Miralani Dr","address2":"http://www.facebook.com/alignbrewing","coords":{"lat":32.896584,"lng":-117.137429}},
-          {"title":"Alpine Beer Company","address1":"6550 Mira Mesa Blvd","address2":"http://www.alpinebrewing.com","coords":{"lat":32.9167796,"lng":-117.113975}},
-          {"title":"Alta Brewing Company","address1":"1983 Julian Avenue","address2":"http://www.altabrewing.com","coords":{"lat":32.7018758,"lng":-117.1414712}}
-        ],
+        "locations": pubLocation,
         "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":6,"zoomControl":true,"maxZoom":17},
         "mapsApiKey": "AIzaSyAdzUPAHWR4kQtGehloqlMuYYkVBlo3YLk"
-      };
+      }
+      console.log(CONFIGURATION)
+
 
       function initMap() {
         new LocatorPlus(CONFIGURATION);
