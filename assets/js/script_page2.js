@@ -4,13 +4,13 @@ var $breweryDisplay = document.querySelector("#brewery-display");
 // pulling weather data from open weather api
 function getWeather(){
     //debugging
-    console.log(searchLocation);
+    //console.log(searchLocation);
 
     var responseUrl = "http://api.openweathermap.org/data/2.5/weather?";
     const apiKey = "5900a658e9006d2a5eb37e656c2e92d5";    
     responseUrl += "q=" + searchLocation + "&appid=" + apiKey + "&units=metric";
 
-    console.log(responseUrl)
+    //console.log(responseUrl)
     $.getJSON(responseUrl, function(data){
         //debugging
         //console.log(data);
@@ -35,13 +35,18 @@ function getBrewery(){
     $.getJSON(responseUrl, function(data){
         //debugging
         console.log(data);
+        localStorage.setItem("data", JSON.stringify(data));
+        console.log(data[0].latitude)
+        
         for(var i=0; i<data.length; i++){
             var $breweryData = document.createElement("li");
             $breweryData.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url + ' | Latititude: ' + data[i].latitude + ' | Longitude: ' + data[i].longitude;
             $breweryData.classList.add("breweryResult");
             $breweryData.setAttribute("data-value", i);
             $breweryDisplay.appendChild($breweryData);
+            
         }
+        
 })
 }
 
