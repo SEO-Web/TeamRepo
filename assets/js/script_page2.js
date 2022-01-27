@@ -51,6 +51,13 @@ function getBrewery(){
             //detail of each brewery
             $breweryData.textContent += 'Name : ' +  data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street  + ' | Website: ' + data[i].website_url;
             $breweryData.classList.add("brewery-result");
+        var filteredPubs = data.filter(elem => elem.latitude && elem.longitude)
+        localStorage.setItem("data", JSON.stringify(filteredPubs));
+        
+        for(var i=0; i<filteredPubs.length; i++){
+            var $breweryData = document.createElement("li");
+            $breweryData.textContent += 'Name : ' +  filteredPubs[i].name + ' | Postal Code:' + filteredPubs[i].postal_code + ' | Address: ' + filteredPubs[i].street + ' | Website: ' + filteredPubs[i].website_url + ' | Latititude: ' + filteredPubs[i].latitude + ' | Longitude: ' + filteredPubs[i].longitude;
+            $breweryData.classList.add("breweryResult");
             $breweryData.setAttribute("data-value", i);
 
             //button to Add tour
