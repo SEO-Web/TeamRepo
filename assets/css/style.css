@@ -52,7 +52,7 @@ hr {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-repeat:no-repeat;
+    /* background-repeat:no-repeat; */
     height: 100vh;
 }
 
