@@ -15,6 +15,7 @@ for (var i = 0; i < storedPubs.length; i++) {
 
   latitudeCenter = storedPubs[0].latitude
   longitudeCenter = storedPubs[0].longitude
+
 }
  
 //console.log(pubLocation)
