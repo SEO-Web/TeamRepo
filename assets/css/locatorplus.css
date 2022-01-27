@@ -1,15 +1,15 @@
 html,
-body {
+/*body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
 #map-container {
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
@@ -165,4 +165,8 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3a23be2e823d44e05b5de66c3a1072ec77779bb2

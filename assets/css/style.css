@@ -126,8 +126,18 @@ hr {
 .location ul li {
     border-bottom: 1px dashed var(--cream);
 }
-.map {
+
+/*the part that needs css*/
+.map-search {
+    color: var(--cream);
+    background-color:var(--black);
+    width: 90%;
+    padding:12px;
+    border: 1px solid var(--blue);
+    margin: 0 4px 4px 4px;
+    border-radius: 0 6px 6px 0;
 }
+
 /* search result */
 .search-result th {
     text-align: left;
