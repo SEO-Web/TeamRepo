@@ -4,22 +4,23 @@ var storedPubs = JSON.parse(localStorage.getItem("data"))
 //console.log(storedPubs.length)
 
 var pubLocation = []
+var latitudeCenter;
+var longitudeCenter;
 
 for (var i = 0; i < storedPubs.length; i++) {
   pubLocation[i] = {
     "title": storedPubs[i].name, "address1": storedPubs[i].street, "address2": storedPubs[i].website_url, "coords": { "lat": parseInt(storedPubs[i].latitude), "lng": parseInt(storedPubs[i].longitude)}
   };
-  console.log(pubLocation[i].coords.lat)
+  //console.log(pubLocation[i].coords.lat)
 
+  latitudeCenter = storedPubs[0].latitude
+  longitudeCenter = storedPubs[0].longitude
 }
-
-// array.filter
-
-
-console.log(pubLocation)
+ 
+//console.log(pubLocation)
 const CONFIGURATION = {
   "locations": pubLocation,
-  "mapOptions": { "center": { "lat": 36, "lng": -115}, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 6, "zoomControl": true, "maxZoom": 17 },
+  "mapOptions": { "center": { "lat": parseInt(latitudeCenter), "lng": parseInt(longitudeCenter)}, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 12, "zoomControl": true, "maxZoom": 17 },
   "mapsApiKey": "AIzaSyAdzUPAHWR4kQtGehloqlMuYYkVBlo3YLk"
 }
 
@@ -78,8 +79,7 @@ function LocatorPlus(configuration) {
   };
 
   // Create a marker for each location.
-  for (var i = 0; i < pubLocation.length; i++){
-    var markers = locator.locations.map(function (location, index) {
+  var markers = locator.locations.map(function (location, index) {
     var marker = new google.maps.Marker({
       position: location.coords,
       map: locator.map,
@@ -89,8 +89,7 @@ function LocatorPlus(configuration) {
       selectResultItem(index, false, true);
     });
     return marker;
-  });}
-
+  });
   // Fit map to marker bounds.
   locator.updateBounds = function () {
     const bounds = new google.maps.LatLngBounds();
