@@ -126,14 +126,25 @@ hr {
 .location ul li {
     border-bottom: 1px dashed var(--cream);
 }
-.map-search ul li {
+/*the part that needs css*/
+.map-search p {
     color: var(--cream);
     background-color:var(--black);
     width: 90%;
     padding:12px;
-    border: 1px solid var(--blue);
+    border: 2px solid var(--blue);
     margin: 0 4px 4px 4px;
     border-radius: 0 6px 6px 0;
+}
+.map-search button {
+    background-color: var(--orange);
+    color: var(--cream);
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 2px 4px 12px 4px;
+}
+.map-search button:hover {
+    background-color:var(--blue);
 }
 /* search result */
 .search-result th {
