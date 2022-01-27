@@ -4,20 +4,27 @@ var storedPubs = JSON.parse(localStorage.getItem("data"))
 //console.log(storedPubs.length)
 
 var pubLocation = []
+
 for (var i = 0; i < storedPubs.length; i++) {
   pubLocation[i] = {
     "title": storedPubs[i].name, "address1": storedPubs[i].street, "address2": storedPubs[i].website_url, "coords": { "lat": parseInt(storedPubs[i].latitude), "lng": parseInt(storedPubs[i].longitude)}
   };
+  console.log(pubLocation[i].coords.lat)
+
 }
 
+// array.filter
 
-//console.log(pubLocation)
+
+console.log(pubLocation)
 const CONFIGURATION = {
   "locations": pubLocation,
-  "mapOptions": { "center": { "lat": 38.0, "lng": -100.0 }, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 6, "zoomControl": true, "maxZoom": 17 },
+  "mapOptions": { "center": { "lat": 36, "lng": -115}, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 6, "zoomControl": true, "maxZoom": 17 },
   "mapsApiKey": "AIzaSyAdzUPAHWR4kQtGehloqlMuYYkVBlo3YLk"
 }
-console.log(CONFIGURATION)
+
+
+//console.log(CONFIGURATION)
 
 
 function initMap() {
@@ -71,8 +78,9 @@ function LocatorPlus(configuration) {
   };
 
   // Create a marker for each location.
-  const markers = locator.locations.map(function (location, index) {
-    const marker = new google.maps.Marker({
+  for (var i = 0; i < pubLocation.length; i++){
+    var markers = locator.locations.map(function (location, index) {
+    var marker = new google.maps.Marker({
       position: location.coords,
       map: locator.map,
       title: location.title,
@@ -81,7 +89,7 @@ function LocatorPlus(configuration) {
       selectResultItem(index, false, true);
     });
     return marker;
-  });
+  });}
 
   // Fit map to marker bounds.
   locator.updateBounds = function () {
