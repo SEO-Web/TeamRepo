@@ -18,7 +18,7 @@ function getWeatherNY() {
 
     });
 
-    getBreweryNY();
+    
 }
 
 function getWeatherSD() {
@@ -39,7 +39,7 @@ function getWeatherSD() {
 
     });
 
-    getBrewerySD
+    
 }
 
 function getWeatherLV() {
@@ -59,59 +59,7 @@ function getWeatherLV() {
         $("#humid-lv").text(data.main.humidity + '%');
 
     });
-    getBreweryLV()
-}
 
-function getBrewerySD() {
-    $breweryDisplay.textContent = "";
-    var responseUrl = "https://api.openbrewerydb.org/breweries?by_city=san_diego";
-
-    $.getJSON(responseUrl, function (data) {
-        //debugging
-        console.log(data);
-        for (var i = 0; i < data.length; i++) {
-            var $breweryData = document.createElement("li");
-            $breweryData.textContent += 'Name : ' + data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url;
-            $breweryData.classList.add("breweryResult");
-            $breweryData.setAttribute("data-value", i);
-            $breweryDisplay.appendChild($breweryData);
-        }
-    })
-}
-
-function getBreweryNY() {
-    $breweryDisplay.textContent = "";
-    var responseUrl = "https://api.openbrewerydb.org/breweries?by_city=new_york";
-    
-    $.getJSON(responseUrl, function (data) {
-        //debugging
-        console.log(data);
-        for (var i = 0; i < data.length; i++) {
-            var $breweryData = document.createElement("li");
-            $breweryData.textContent += 'Name : ' + data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url;
-            $breweryData.classList.add("breweryResult");
-            $breweryData.setAttribute("data-value", i);
-            $breweryDisplay.appendChild($breweryData);
-        }
-    })
-}
-
-function getBreweryLV() {
-    $breweryDisplay.textContent = "";
-    var responseUrl = "https://api.openbrewerydb.org/breweries?by_city=las_vegas";
-    
-
-    $.getJSON(responseUrl, function (data) {
-        //debugging
-        console.log(data);
-        for (var i = 0; i < data.length; i++) {
-            var $breweryData = document.createElement("li");
-            $breweryData.textContent += 'Name : ' + data[i].name + ' | Postal Code:' + data[i].postal_code + ' | Address: ' + data[i].street + ' | Website: ' + data[i].website_url;
-            $breweryData.classList.add("breweryResult");
-            $breweryData.setAttribute("data-value", i);
-            $breweryDisplay.appendChild($breweryData);
-        }
-    })
 }
 
 $(document).ready(getWeatherSD());
