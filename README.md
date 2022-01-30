@@ -23,17 +23,17 @@ Then I am taken to the map of this route showing the locations on that route
 
 ## Usage:
 The first thing that will happen when you arrive at our website is you will be asked if you are over the age of 21? if No you will not progress through to our website.
-<img src="/assets/images/no.png" alt="Screenshot of result of saying no.">
+<img src="./assets/images/no.png" alt="Screenshot of result of saying no.">
 When you arrive at our website you will be greeted with the landing page that looks like this. 
-<img src="/assets/images/landing.png" alt="Screenshot of the landing page">
+<img src="./assets/images/landing.png" alt="Screenshot of the landing page">
 To start planing your next brewery tour simply click the Play icon in the center of the homepage to choose your destination. Once clicked you will be asked "Where are you heading" This is where you put your search destination.
-<img src="/assets/images/search.png" alt="Screenshot of the search section">
+<img src="./assets/images/search.png" alt="Screenshot of the search section">
 You will then be taken to another page that has a list of breweries, pubs etc. click "Add to tour" button to add them to your tour.
-<img src="/assets/images/createtour.png>" alt="Screenshot of the page.">
+<img src="./assets/images/createtour.png" alt="Screenshot of the page.">
 See previous tours constructed by clicking on the "saved tours" section in the nav bar.
-<img src="/assets/images/savedtours.png" alt="Screenshot of saved tours setion">
+<img src="./assets/images/savedtours.png" alt="Screenshot of saved tours setion">
 Finally go to the "Map it" section of the nav bar to see where all your tours are in relation to each other. 
-<img src="/assets/images/mapit.png>" alt="Screenshot of the page.">
+<img src="./assets/images/mapit.png" alt="Screenshot of the page.">
 
 ## Future Developments
 The future developments for this webpage are:
