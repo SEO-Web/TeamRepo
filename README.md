@@ -37,12 +37,12 @@ Finally go to the "Map it" section of the nav bar to see where all your tours ar
 
 ## Future Developments
 The future developments for this webpage are:
-- Looking to expand internationally. 
+- Looking to expand internationally 
 - Turn tours into PDFs so that that a hard copy can be printed in order to make sharing easier.
 - Sharing your tours via your social channels with friends and family.
 - Data base intergration, Storing tours in a data base for future use.
 - Contact form, implimenting a contact form so that users can share their best crawls.
-Authors and acknowledgment
+Authors and acknowledgment.
 DanLawrence91, SEO-Web, urorachama, skipsterling.
 
 ## Credits
