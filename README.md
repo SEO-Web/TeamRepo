@@ -6,6 +6,7 @@ A website that allows you to create a tour to all or some of the breweries in yo
 As someone looking to visit a new city, I want to enter that city into the application and find a list of breweries along with their location so that I can develop a route to visit different breweries and bottleshops in that city, and find the best route between them, along with the weather for that day.
 
 ## Acceptance Criteria
+
 - Given a homepage with a form input
 - When I search for a city
 - Then I am presented with a list of brewery locations for that city
@@ -42,6 +43,7 @@ The future developments for this webpage are:
 - Data base intergration, Storing tours in a data base for future use.
 - Contact form, implimenting a contact form so that users can share their best crawls.
 - Authors and acknowledgment - DanLawrence91, SEO-Web, urorachama, skipsterling.
+
 
 ## Credits
 Credits go to the Open Brewery data base https://www.openbrewerydb.org/
