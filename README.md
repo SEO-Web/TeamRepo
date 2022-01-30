@@ -27,13 +27,13 @@ The first thing that will happen when you arrive at our website is you will be a
 When you arrive at our website you will be greeted with the landing page that looks like this. 
 <img src="/assets/images/landing.png" alt="Screenshot of the landing page">
 To start planing your next brewery tour simply click the Play icon in the center of the homepage to choose your destination. Once clicked you will be asked "Where are you heading" This is where you put your search destination.
-<img src="/images/search.png" alt="Screenshot of the search section">
+<img src="/assets/images/search.png" alt="Screenshot of the search section">
 You will then be taken to another page that has a list of breweries, pubs etc. click "Add to tour" button to add them to your tour.
-<img src="/images/createtour.png>" alt="Screenshot of the page.">
+<img src="/assets/images/createtour.png>" alt="Screenshot of the page.">
 See previous tours constructed by clicking on the "saved tours" section in the nav bar.
-<img src="/images/savedtours.png" alt="Screenshot of saved tours setion">
+<img src="/assets/images/savedtours.png" alt="Screenshot of saved tours setion">
 Finally go to the "Map it" section of the nav bar to see where all your tours are in relation to each other. 
-<img src="/images/mapit.png>" alt="Screenshot of the page.">
+<img src="/assets/images/mapit.png>" alt="Screenshot of the page.">
 
 ## Future Developments
 The future developments for this webpage are:
