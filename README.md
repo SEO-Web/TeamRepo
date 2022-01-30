@@ -42,8 +42,7 @@ The future developments for this webpage are:
 - Sharing your tours via your social channels with friends and family.
 - Data base intergration, Storing tours in a data base for future use.
 - Contact form, implimenting a contact form so that users can share their best crawls.
-Authors and acknowledgment.
-DanLawrence91, SEO-Web, urorachama, skipsterling.
+- Authors and acknowledgment - DanLawrence91, SEO-Web, urorachama, skipsterling.
 
 ## Credits
 Credits go to the Open Brewery data base https://www.openbrewerydb.org/
