@@ -3,7 +3,7 @@ var $breweryDisplay = document.querySelector("#brewery-display");
 function getWeatherNY() {
     //debugging
 
-    var responseUrl = "http://api.openweathermap.org/data/2.5/weather?q=New York&units=metric&appid=5900a658e9006d2a5eb37e656c2e92d5";
+    var responseUrl = "https://api.openweathermap.org/data/2.5/weather?q=New York&units=metric&appid=5900a658e9006d2a5eb37e656c2e92d5";
 
     $.getJSON(responseUrl, function (data) {
         //debugging
@@ -24,7 +24,7 @@ function getWeatherNY() {
 function getWeatherSD() {
     //debugging
 
-    var responseUrl = "http://api.openweathermap.org/data/2.5/weather?q=San Diego&units=metric&appid=5900a658e9006d2a5eb37e656c2e92d5";
+    var responseUrl = "https://api.openweathermap.org/data/2.5/weather?q=San Diego&units=metric&appid=5900a658e9006d2a5eb37e656c2e92d5";
 
     $.getJSON(responseUrl, function (data) {
         //debugging
@@ -45,7 +45,7 @@ function getWeatherSD() {
 function getWeatherLV() {
     //debugging
 
-    var responseUrl = "http://api.openweathermap.org/data/2.5/weather?q=Las Vegas&units=metric&appid=5900a658e9006d2a5eb37e656c2e92d5";
+    var responseUrl = "https://api.openweathermap.org/data/2.5/weather?q=Las Vegas&units=metric&appid=5900a658e9006d2a5eb37e656c2e92d5";
 
     $.getJSON(responseUrl, function (data) {
         //debugging
