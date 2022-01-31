@@ -17,7 +17,7 @@ As someone looking to visit a new city, I want to enter that city into the appli
 - When I search a city
 - Then I am also presented with the weather for that city
 - When I view the weather
-- Then I am presented with the temperature, the humidity, and the wind speed
+- Then I am presented with the temperature, the humidity, the wind speed and the weather conditions with an icon
 - When I click on a stored route
 - Then I am taken to the map of this route showing the locations on that route
 
