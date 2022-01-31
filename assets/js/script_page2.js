@@ -1,8 +1,9 @@
 var searchLocation = localStorage.getItem("city");
 var $breweryDisplay = document.querySelector("#brewery-display");
 var $breweryTour = document.querySelector("#stops");
+var $errorMsg = document.querySelector("#error-message");
 //var tourBtn = document.querySelector("testing");
-var $location = $(".location");
+var $description = document.querySelector("#weather_icon");
 var tourCount = 0;
 $breweryTour.textContent = "";
 // pulling weather data from open weather api
@@ -14,16 +15,20 @@ function getWeather() {
     responseUrl += "q=" + searchLocation + "&appid=" + apiKey + "&units=metric";
     //console.log(responseUrl)
     $.getJSON(responseUrl, function (data) {
-        //debugging
-        //console.log(data);
+        // weather description
+        var $weatherIcon = document.createElement("img");
+        console.log(data);
         console.log(responseUrl);
         var farenheight = (data.main.temp * 9 / 5) + 32;
         var knot = data.wind.speed / 1.852;
         $("#city-search").text(searchLocation);
         $("#temp").text(Math.round(data.main.temp) + ' °Celsius / ' + Math.round(farenheight) + ' °Farenheight');
         $("#wind").text((data.wind.speed * 3.6).toFixed(1) + ' km/h / ' + (data.wind.speed / 0.44704).toFixed(1) + 'mph /' + knot.toFixed(1) + ' knot');
-        // weather description
-        $("#humid").text(data.main.humidity + '%' + data.weather[0].main);
+        $("#humid").text(data.main.humidity + '%');
+        
+        $("#weather_icon").text(data.weather[0].main);
+        $weatherIcon.setAttribute("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+        $description.appendChild($weatherIcon);
     });
     getBrewery();
 }
@@ -35,10 +40,8 @@ function getBrewery() {
     $.getJSON(responseUrl, function (data) {
         //debugging
         //console.log(data);
-
         var filteredPubs = data.filter(elem => elem.latitude && elem.longitude)
         localStorage.setItem("data", JSON.stringify(filteredPubs));
-
         for (var i = 0; i < filteredPubs.length; i++) {
             //add detail of each brewery
             var $breweryData = document.createElement("p");
@@ -106,7 +109,6 @@ function addToTour(event) {
         }
     })
 }
-function testin(event) {
-}
+
 //onload (Anything to do when loading the page)
 $(document).ready(getWeather());
