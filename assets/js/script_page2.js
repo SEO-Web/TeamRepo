@@ -10,7 +10,7 @@ $breweryTour.textContent = "";
 function getWeather() {
     //debugging
     //console.log(searchLocation);
-    var responseUrl = "http://api.openweathermap.org/data/2.5/weather?";
+    var responseUrl = "https://api.openweathermap.org/data/2.5/weather?";
     const apiKey = "5900a658e9006d2a5eb37e656c2e92d5";
     responseUrl += "q=" + searchLocation + "&appid=" + apiKey + "&units=metric";
     //console.log(responseUrl)
