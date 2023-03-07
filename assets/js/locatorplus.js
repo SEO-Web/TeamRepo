@@ -22,7 +22,7 @@ for (var i = 0; i < storedPubs.length; i++) {
 const CONFIGURATION = {
   "locations": pubLocation,
   "mapOptions": { "center": { "lat": parseInt(latitudeCenter), "lng": parseInt(longitudeCenter)}, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 12, "zoomControl": true, "maxZoom": 17 },
-  "mapsApiKey": "AIzaSyAdzUPAHWR4kQtGehloqlMuYYkVBlo3YLk"
+  "mapsApiKey": ""
 }
 
 
